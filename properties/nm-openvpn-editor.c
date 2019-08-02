@@ -1803,6 +1803,7 @@ advanced_dialog_new_hash_from_dialog (GtkWidget *dialog)
 	GtkBuilder *builder;
 	const char *contype = NULL;
 	const char *value;
+	int active;
 	int proxy_type = PROXY_TYPE_NONE;
 	GtkTreeModel *model;
 	GtkTreeIter iter;
