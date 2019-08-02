@@ -401,14 +401,14 @@ msgstr ""
 #: ../properties/nm-openvpn-dialog.ui.h:49
 #, fuzzy
 msgid "Use L_ZO data compression"
-msgstr "ใช้การบีบบอัด LZO"
+msgstr "ใช้การบีบบอัด LZ"
 
 #: ../properties/nm-openvpn-dialog.ui.h:50
 #, fuzzy
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
-msgstr "ใช้การบีบบอัด LZO"
+"Use fast LZ compression.\n"
+"config: compress"
+msgstr "ใช้การบีบบอัด LZ"
 
 #: ../properties/nm-openvpn-dialog.ui.h:52
 #, fuzzy
@@ -904,8 +904,8 @@ msgstr ""
 #~ msgid "Routes:  %s"
 #~ msgstr "เส้นทาง:  %s"
 
-#~ msgid "Use LZO Compression: %s"
-#~ msgstr "ใช้การบีบอัด LZO: %s"
+#~ msgid "Use LZ Compression: %s"
+#~ msgstr "ใช้การบีบอัด LZ: %s"
 
 #~ msgid "Yes"
 #~ msgstr "ใช้"

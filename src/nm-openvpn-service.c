@@ -145,7 +145,7 @@ static const ValidProperty valid_properties[] = {
 	{ NM_OPENVPN_KEY_CERT,                      G_TYPE_STRING, 0, 0, FALSE },
 	{ NM_OPENVPN_KEY_CIPHER,                    G_TYPE_STRING, 0, 0, FALSE },
 	{ NM_OPENVPN_KEY_KEYSIZE,                   G_TYPE_INT, 1, 65535, FALSE },
-	{ NM_OPENVPN_KEY_COMP_LZO,                  G_TYPE_STRING, 0, 0, FALSE },
+	{ NM_OPENVPN_KEY_COMPRESS,                  G_TYPE_STRING, 0, 0, FALSE },
 	{ NM_OPENVPN_KEY_CONNECT_TIMEOUT,           G_TYPE_INT, 0, G_MAXINT, FALSE },
 	{ NM_OPENVPN_KEY_CONNECTION_TYPE,           G_TYPE_STRING, 0, 0, FALSE },
 	{ NM_OPENVPN_KEY_CRL_VERIFY_FILE,           G_TYPE_STRING, 0, 0, FALSE },
@@ -1474,33 +1474,14 @@ nm_openvpn_start_openvpn_binary (NMOpenvpnPlugin *plugin,
 		}
 	}
 
-	tmp = nm_setting_vpn_get_data_item (s_vpn, NM_OPENVPN_KEY_COMP_LZO);
-
-	/* openvpn understands 4 different modes for --comp-lzo, which have
-	 * different meaning:
-	 *  1) no --comp-lzo option
-	 *  2) --comp-lzo yes
-	 *  3) --comp-lzo [adaptive]
-	 *  4) --comp-lzo no
-	 *
-	 * In the past, nm-openvpn only supported 1) and 2) by having no
-	 * comp-lzo connection setting or "comp-lzo=yes", respectively.
-	 *
-	 * However, old plasma-nm would set "comp-lzo=no" in the connection
-	 * to mean 1). Thus, "comp-lzo=no" is spoiled to mean 4) in order
-	 * to preserve backward compatibily.
-	 * We use instead a special value "no-by-default" to express "no".
-	 *
-	 * See bgo#769177
-	 */
-	if (NM_IN_STRSET (tmp, "no")) {
-		/* means no --comp-lzo option. */
-		tmp = NULL;
-	} else if (NM_IN_STRSET (tmp, "no-by-default"))
-		tmp = "no";
-
-	if (NM_IN_STRSET (tmp, "yes", "no", "adaptive"))
-		args_add_strv (args, "--comp-lzo", tmp);
+	tmp = nm_setting_vpn_get_data_item (s_vpn, NM_OPENVPN_KEY_COMPRESS);
+	if (NM_IN_STRSET (tmp, "yes", "lzo", "lz4"))
+	{
+		if (nm_streq0 (tmp, "yes"))
+			args_add_strv (args, "--compress");
+		else
+			args_add_strv (args, "--compress", tmp);
+	}
 
 	tmp = nm_setting_vpn_get_data_item (s_vpn, NM_OPENVPN_KEY_FLOAT);
 	if (nm_streq0 (tmp, "yes"))

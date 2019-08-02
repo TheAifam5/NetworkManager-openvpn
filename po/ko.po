@@ -405,14 +405,14 @@ msgstr ""
 #: ../properties/nm-openvpn-dialog.ui.h:49
 #, fuzzy
 msgid "Use L_ZO data compression"
-msgstr "LZO 압축 사용(_Z)"
+msgstr "LZ 압축 사용(_Z)"
 
 #: ../properties/nm-openvpn-dialog.ui.h:50
 #, fuzzy
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
-msgstr "LZO 압축 사용: %s"
+"Use fast LZ compression.\n"
+"config: compress"
+msgstr "LZ 압축 사용: %s"
 
 #: ../properties/nm-openvpn-dialog.ui.h:52
 #, fuzzy

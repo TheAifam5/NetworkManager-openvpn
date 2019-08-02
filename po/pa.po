@@ -215,8 +215,8 @@ msgstr "L_ZO ਡਾਟਾ ਕੰਪਰੈਸ਼ਨ ਵਰਤੋਂ"
 
 #: ../properties/nm-openvpn-dialog.ui.h:11
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
+"Use fast LZ compression.\n"
+"config: compress"
 msgstr ""
 
 #: ../properties/nm-openvpn-dialog.ui.h:13

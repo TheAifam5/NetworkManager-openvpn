@@ -226,8 +226,8 @@ msgstr "неисправна опција"
 
 #: ../properties/import-export.c:996
 #, c-format
-msgid "unsupported comp-lzo argument"
-msgstr "неподржан аргумент „comp-lzo“"
+msgid "unsupported compress argument"
+msgstr "неподржан аргумент „compress“"
 
 #: ../properties/import-export.c:1094
 #, c-format
@@ -887,19 +887,19 @@ msgstr "Користи _ЛЗО сажимање података"
 
 #: ../properties/nm-openvpn-dialog.ui.h:44
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
+"Use fast LZ compression.\n"
+"config: compress"
 msgstr ""
 "Користите брзо ЛЗО сажимање.\n"
-"подешавање: „comp-lzo“"
+"подешавање: „compress“"
 
 #: ../properties/nm-openvpn-dialog.ui.h:46
 msgid ""
-"Select the LZO data compression mode.\n"
-"config: comp-lzo"
+"Select the LZ data compression mode.\n"
+"config: compress"
 msgstr ""
 "Изаберите ЛЗО режим паковања података.\n"
-"подешавање: „comp-lzo“"
+"подешавање: „compress“"
 
 #: ../properties/nm-openvpn-dialog.ui.h:48
 msgid "Use a _TCP connection"

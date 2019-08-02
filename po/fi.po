@@ -220,7 +220,7 @@ msgstr "virheellinen valinta"
 
 #: ../properties/import-export.c:1014
 #, c-format
-msgid "unsupported comp-lzo argument"
+msgid "unsupported compress argument"
 msgstr ""
 
 #: ../properties/import-export.c:1112
@@ -865,16 +865,16 @@ msgstr "Käytä L_ZO-pakkausta"
 #: ../properties/nm-openvpn-dialog.ui.h:44
 #, fuzzy
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
-msgstr "Käytä LZO-pakkausta: %s"
+"Use fast LZ compression.\n"
+"config: compress"
+msgstr "Käytä LZ-pakkausta: %s"
 
 #: ../properties/nm-openvpn-dialog.ui.h:46
 #, fuzzy
 msgid ""
-"Select the LZO data compression mode.\n"
-"config: comp-lzo"
-msgstr "Käytä LZO-pakkausta: %s"
+"Select the LZ data compression mode.\n"
+"config: compress"
+msgstr "Käytä LZ-pakkausta: %s"
 
 #: ../properties/nm-openvpn-dialog.ui.h:48
 msgid "Use a _TCP connection"

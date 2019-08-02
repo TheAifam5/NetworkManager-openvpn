@@ -409,9 +409,9 @@ msgstr "Nén bằng L_ZO"
 #: ../properties/nm-openvpn-dialog.ui.h:50
 #, fuzzy
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
-msgstr "Nén bằng LZO: %s"
+"Use fast LZ compression.\n"
+"config: compress"
+msgstr "Nén bằng LZ: %s"
 
 #: ../properties/nm-openvpn-dialog.ui.h:52
 #, fuzzy

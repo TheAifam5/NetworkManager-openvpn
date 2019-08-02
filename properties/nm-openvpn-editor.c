@@ -56,35 +56,11 @@ static GtkFileFilter *sk_file_chooser_filter_new (void);
 
 /*****************************************************************************/
 
-static const char *comp_lzo_values[] = {
-	"adaptive",
+static const char *compress_values[] = {
 	"yes",
-	"no-by-default",
+	"lz4",
+	"lzo",
 };
-
-static const char *
-comp_lzo_values_conf_coerce (const char *value_conf)
-{
-	if (!value_conf || nm_streq (value_conf, "no"))
-		return NULL;
-	if (nm_streq (value_conf, "yes"))
-		return "yes";
-	if (nm_streq (value_conf, "no-by-default"))
-		return "no-by-default";
-	return "adaptive";
-}
-
-static const char *
-comp_lzo_values_conf_to_display (const char *value_conf)
-{
-	if (nm_streq (value_conf, "yes"))
-		return "yes";
-	if (nm_streq (value_conf, "no-by-default"))
-		return "no";
-	if (nm_streq (value_conf, "adaptive"))
-		return "adaptive";
-	g_return_val_if_reached ("adaptive");
-}
 
 /*****************************************************************************/
 
@@ -684,7 +660,7 @@ sk_file_chooser_filter_new (void)
 static const char *const advanced_keys[] = {
 	NM_OPENVPN_KEY_AUTH,
 	NM_OPENVPN_KEY_CIPHER,
-	NM_OPENVPN_KEY_COMP_LZO,
+	NM_OPENVPN_KEY_COMPRESS,
 	NM_OPENVPN_KEY_CONNECT_TIMEOUT,
 	NM_OPENVPN_KEY_CRL_VERIFY_DIR,
 	NM_OPENVPN_KEY_CRL_VERIFY_FILE,
@@ -1585,17 +1561,17 @@ advanced_dialog_new (GHashTable *hash, const char *contype)
 	                                   _nm_utils_ascii_str_to_int64 (value, 10, 0, 65535, 1300));
 
 
-	value = comp_lzo_values_conf_coerce (g_hash_table_lookup (hash, NM_OPENVPN_KEY_COMP_LZO));
-	widget = GTK_WIDGET (_builder_init_toggle_button (builder, "lzo_checkbutton", value != NULL));
-	combo = GTK_WIDGET (gtk_builder_get_object (builder, "lzo_combo"));
+	value = g_hash_table_lookup (hash, NM_OPENVPN_KEY_COMPRESS);
+	widget = GTK_WIDGET (_builder_init_toggle_button (builder, "compress_checkbutton", value != NULL));
+	combo = GTK_WIDGET (gtk_builder_get_object (builder, "compress_combo"));
 	store = gtk_list_store_new (1, G_TYPE_STRING);
 	active = 0;
-	for (i = 0; i < G_N_ELEMENTS (comp_lzo_values); i++) {
+	for (i = 0; i < G_N_ELEMENTS (compress_values); i++) {
 		gtk_list_store_append (store, &iter);
 		gtk_list_store_set (store, &iter,
-		                    0, comp_lzo_values_conf_to_display (comp_lzo_values[i]),
+		                    0, compress_values[i],
 		                    -1);
-		if (nm_streq (comp_lzo_values[i], value ?: "adaptive"))
+		if (nm_streq (compress_values[i], value ?: "yes"))
 			active = i;
 	}
 	gtk_combo_box_set_model (GTK_COMBO_BOX (combo), GTK_TREE_MODEL (store));
@@ -1827,7 +1803,6 @@ advanced_dialog_new_hash_from_dialog (GtkWidget *dialog)
 	GtkBuilder *builder;
 	const char *contype = NULL;
 	const char *value;
-	int active;
 	int proxy_type = PROXY_TYPE_NONE;
 	GtkTreeModel *model;
 	GtkTreeIter iter;
@@ -1934,12 +1909,12 @@ advanced_dialog_new_hash_from_dialog (GtkWidget *dialog)
 		}
 	}
 
-	widget = GTK_WIDGET (gtk_builder_get_object (builder, "lzo_checkbutton"));
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "compress_checkbutton"));
 	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget))) {
-		combo = GTK_WIDGET (gtk_builder_get_object (builder, "lzo_combo"));
+		combo = GTK_WIDGET (gtk_builder_get_object (builder, "compress_combo"));
 		active = gtk_combo_box_get_active (GTK_COMBO_BOX (combo));
-		if (active >= 0 && active < G_N_ELEMENTS (comp_lzo_values))
-			g_hash_table_insert (hash, NM_OPENVPN_KEY_COMP_LZO, g_strdup (comp_lzo_values[active]));
+		if (active >= 0 && active < G_N_ELEMENTS (compress_values))
+			g_hash_table_insert (hash, g_strdup (NM_OPENVPN_KEY_COMPRESS), g_strdup (compress_values[active]));
 	}
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "mssfix_checkbutton"));
@@ -2696,6 +2671,7 @@ nm_vpn_editor_factory_openvpn (NMVpnEditorPlugin *editor_plugin,
                                NMConnection *connection,
                                GError **error)
 {
+	g_type_ensure (NMA_TYPE_CERT_CHOOSER);
 	return openvpn_editor_new (connection, error);
 }
 #endif

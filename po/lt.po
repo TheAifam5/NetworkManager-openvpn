@@ -232,8 +232,8 @@ msgstr "netinkamas parametras"
 
 #: ../properties/import-export.c:1014
 #, c-format
-msgid "unsupported comp-lzo argument"
-msgstr "nepalaikomas comp-lzo argumentas"
+msgid "unsupported compress argument"
+msgstr "nepalaikomas compress argumentas"
 
 #: ../properties/import-export.c:1112
 #, c-format
@@ -886,19 +886,19 @@ msgstr "Naudoti L_ZO duomenų glaudinimą"
 
 #: ../properties/nm-openvpn-dialog.ui.h:44
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
+"Use fast LZ compression.\n"
+"config: compress"
 msgstr ""
-"Naudoti greitą LZO suspaudimą.\n"
-"konfig: comp-lzo"
+"Naudoti greitą LZ suspaudimą.\n"
+"konfig: compress"
 
 #: ../properties/nm-openvpn-dialog.ui.h:46
 msgid ""
-"Select the LZO data compression mode.\n"
-"config: comp-lzo"
+"Select the LZ data compression mode.\n"
+"config: compress"
 msgstr ""
-"Pasirinkite LZO duomenų glaudinimo veikseną.\n"
-"konfig.: comp-lzo"
+"Pasirinkite LZ duomenų glaudinimo veikseną.\n"
+"konfig.: compress"
 
 #: ../properties/nm-openvpn-dialog.ui.h:48
 msgid "Use a _TCP connection"

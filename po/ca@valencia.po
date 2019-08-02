@@ -408,9 +408,9 @@ msgstr "Utilitza la compressió de dades L_ZO"
 #: ../properties/nm-openvpn-dialog.ui.h:50
 #, fuzzy
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
-msgstr "Utilitza compressió LZO: %s"
+"Use fast LZ compression.\n"
+"config: compress"
+msgstr "Utilitza compressió LZ: %s"
 
 #: ../properties/nm-openvpn-dialog.ui.h:52
 msgid "Use a _TCP connection"

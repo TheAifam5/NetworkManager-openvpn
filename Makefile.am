@@ -22,7 +22,7 @@ SUBDIRS = \
 plugindir = $(libdir)/NetworkManager
 plugin_LTLIBRARIES =
 
-dbusservicedir = $(sysconfdir)/dbus-1/system.d
+dbusservicedir = $(datadir)/dbus-1/system.d
 dbusservice_DATA = nm-openvpn-service.conf
 
 nmvpnservicedir = $(NM_VPN_SERVICE_DIR)
@@ -285,6 +285,7 @@ properties_tests_test_import_export_glib_LDADD = \
 
 
 EXTRA_DIST += \
+	properties/tests/conf/compress.ovpn \
 	properties/tests/conf/iso885915.ovpn \
 	properties/tests/conf/mtu-disc.ovpn \
 	properties/tests/conf/password.conf \

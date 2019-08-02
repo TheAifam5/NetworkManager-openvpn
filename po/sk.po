@@ -403,14 +403,14 @@ msgstr ""
 #: ../properties/nm-openvpn-dialog.ui.h:49
 #, fuzzy
 msgid "Use L_ZO data compression"
-msgstr "Použiť kompresiu LZO: %s"
+msgstr "Použiť kompresiu LZ: %s"
 
 #: ../properties/nm-openvpn-dialog.ui.h:50
 #, fuzzy
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
-msgstr "Použiť kompresiu LZO: %s"
+"Use fast LZ compression.\n"
+"config: compress"
+msgstr "Použiť kompresiu LZ: %s"
 
 #: ../properties/nm-openvpn-dialog.ui.h:52
 #, fuzzy

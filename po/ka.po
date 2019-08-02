@@ -405,14 +405,14 @@ msgstr ""
 #: ../properties/nm-openvpn-dialog.ui.h:49
 #, fuzzy
 msgid "Use L_ZO data compression"
-msgstr "LZO-კუმშვის გამოყენება"
+msgstr "LZ-კუმშვის გამოყენება"
 
 #: ../properties/nm-openvpn-dialog.ui.h:50
 #, fuzzy
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
-msgstr "LZO-კუმშვის გამოყენება"
+"Use fast LZ compression.\n"
+"config: compress"
+msgstr "LZ-კუმშვის გამოყენება"
 
 #: ../properties/nm-openvpn-dialog.ui.h:52
 #, fuzzy
@@ -910,8 +910,8 @@ msgstr ""
 #~ msgid "Routes:  %s"
 #~ msgstr "მარშრუტები: %s"
 
-#~ msgid "Use LZO Compression: %s"
-#~ msgstr "LZO კუმშვის მეთოდი: %s"
+#~ msgid "Use LZ Compression: %s"
+#~ msgstr "LZ კუმშვის მეთოდი: %s"
 
 #~ msgid "Yes"
 #~ msgstr "დიახ"

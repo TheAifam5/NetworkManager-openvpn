@@ -395,12 +395,12 @@ msgstr ""
 
 #: ../properties/nm-openvpn-dialog.ui.h:49
 msgid "Use L_ZO data compression"
-msgstr "Выкарыстоўваць LZO-_сцісканне"
+msgstr "Выкарыстоўваць LZ-_сцісканне"
 
 #: ../properties/nm-openvpn-dialog.ui.h:50
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
+"Use fast LZ compression.\n"
+"config: compress"
 msgstr ""
 
 #: ../properties/nm-openvpn-dialog.ui.h:52

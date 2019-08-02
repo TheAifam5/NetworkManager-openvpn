@@ -1010,14 +1010,14 @@ config: reneg-sec</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">6</property>
                     <child>
-                      <object class="GtkCheckButton" id="lzo_checkbutton">
-                        <property name="label" translatable="yes">Use L_ZO data compression</property>
+                      <object class="GtkCheckButton" id="compress_checkbutton">
+                        <property name="label" translatable="yes">se L_Z data compression:</property>
                         <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
-                        <property name="tooltip_text" translatable="yes">Use fast LZO compression.
-config: comp-lzo</property>
+                        <property name="tooltip_text" translatable="yes">Use fast LZ compression.
+config: compress</property>
                         <property name="use_underline">True</property>
                         <property name="xalign">0</property>
                         <property name="draw_indicator">True</property>
@@ -1029,11 +1029,11 @@ config: comp-lzo</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkComboBox" id="lzo_combo">
+                      <object class="GtkComboBox" id="compress_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="tooltip_text" translatable="yes">Select the LZO data compression mode.
-config: comp-lzo</property>
+                        <property name="tooltip_text" translatable="yes">Select the LZ data compression mode.
+config: compress</property>
                         <property name="model">model4</property>
                         <child>
                           <object class="GtkCellRendererText" id="renderer13"/>

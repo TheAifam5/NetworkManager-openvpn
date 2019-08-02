@@ -227,8 +227,8 @@ msgstr "érvénytelen kapcsoló"
 
 #: ../properties/import-export.c:1014
 #, c-format
-msgid "unsupported comp-lzo argument"
-msgstr "nem támogatott comp-lzo argumentum"
+msgid "unsupported compress argument"
+msgstr "nem támogatott compress argumentum"
 
 #: ../properties/import-export.c:1112
 #, c-format
@@ -884,19 +884,19 @@ msgstr "L_ZO tömörítés használata"
 
 #: ../properties/nm-openvpn-dialog.ui.h:44
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
+"Use fast LZ compression.\n"
+"config: compress"
 msgstr ""
-"Gyors LZO tömörítés használata.\n"
-"config: comp-lzo"
+"Gyors LZ tömörítés használata.\n"
+"config: compress"
 
 #: ../properties/nm-openvpn-dialog.ui.h:46
 msgid ""
-"Select the LZO data compression mode.\n"
-"config: comp-lzo"
+"Select the LZ data compression mode.\n"
+"config: compress"
 msgstr ""
-"Válasza ki az LZO adattömörítés módját.\n"
-"config: comp-lzo"
+"Válasza ki az LZ adattömörítés módját.\n"
+"config: compress"
 
 #: ../properties/nm-openvpn-dialog.ui.h:48
 msgid "Use a _TCP connection"

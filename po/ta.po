@@ -408,8 +408,8 @@ msgstr "L_ZO தரவு குறுக்கத்தை பயன்பட�
 
 #: ../properties/nm-openvpn-dialog.ui.h:50
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
+"Use fast LZ compression.\n"
+"config: compress"
 msgstr ""
 
 #: ../properties/nm-openvpn-dialog.ui.h:52

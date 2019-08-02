@@ -1,4 +1,27 @@
 =======================================================
+NetworkManager-openvpn-1.8.11
+Overview of changes since NetworkManager-openvpn-1.8.10
+=======================================================
+
+This is a new stable release of NetworkManager-openvpn.  Notable changes include:
+
+* libnm-glib compatibility (NetworkManager < 1.0) is disabled by default.
+  It can be enabled by passing --with-libnm-glib to configure script.
+  Nobody should need it by now. Users that still use this are encourage
+  to let us know before the libnm-glib support is removed for good.
+* The auth helper in external UI mode can now be run without a display
+  server. Future nmcli version will utilize this for handling the
+  secrets without a graphical desktop.
+* Fixes an issue where the widget classes templated with GtkBuilder
+  don't load the types they require.
+* Moves D-Bus policy file to /usr/share/dbus-1/system.d/.
+  To better support stateless systems with an empty /etc, the old location
+  in /etc/dbus-1/system.d/ should only be used for local admin changes.
+  Package provided D-Bus policy files are supposed to be installed in
+  /usr/share/dbus-1/system.d/.
+  This is supported since dbus 1.9.18.
+
+=======================================================
 NetworkManager-openvpn-1.8.10
 Overview of changes since NetworkManager-openvpn-1.8.8
 =======================================================

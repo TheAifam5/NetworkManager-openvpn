@@ -399,12 +399,12 @@ msgstr ""
 
 #: ../properties/nm-openvpn-dialog.ui.h:49
 msgid "Use L_ZO data compression"
-msgstr "LZO তথ্য সঙ্কোচন ব্যৱহাৰ কৰক (_Z)"
+msgstr "LZ তথ্য সঙ্কোচন ব্যৱহাৰ কৰক (_Z)"
 
 #: ../properties/nm-openvpn-dialog.ui.h:50
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
+"Use fast LZ compression.\n"
+"config: compress"
 msgstr ""
 
 #: ../properties/nm-openvpn-dialog.ui.h:52

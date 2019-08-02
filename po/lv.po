@@ -228,8 +228,8 @@ msgstr "nederīga opcija"
 
 #: ../properties/import-export.c:991
 #, c-format
-msgid "unsupported comp-lzo argument"
-msgstr "neatbalstīts comp-lzo arguments"
+msgid "unsupported compress argument"
+msgstr "neatbalstīts compress arguments"
 
 #: ../properties/import-export.c:1089
 #, c-format
@@ -913,22 +913,22 @@ msgstr "Lietot L_ZO datu kompresiju"
 
 #: ../properties/nm-openvpn-dialog.ui.h:44
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
+"Use fast LZ compression.\n"
+"config: compress"
 msgstr ""
-"Lietot ātro LZO saspiešanu.\n"
-"config: comp-lzo"
+"Lietot ātro LZ saspiešanu.\n"
+"config: compress"
 
 #: ../properties/nm-openvpn-dialog.ui.h:46
 #| msgid ""
-#| "Use fast LZO compression.\n"
-#| "config: comp-lzo"
+#| "Use fast LZ compression.\n"
+#| "config: compress"
 msgid ""
-"Select the LZO data compression mode.\n"
-"config: comp-lzo"
+"Select the LZ data compression mode.\n"
+"config: compress"
 msgstr ""
-"Izvēlēties LZO saspiešanas režīmu.\n"
-"config: comp-lzo"
+"Izvēlēties LZ saspiešanas režīmu.\n"
+"config: compress"
 
 #: ../properties/nm-openvpn-dialog.ui.h:48
 msgid "Use a _TCP connection"

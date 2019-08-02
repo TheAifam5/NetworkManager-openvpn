@@ -424,11 +424,11 @@ msgstr "Koristi L_ZO kompresiju podataka"
 
 #: ../properties/nm-openvpn-dialog.ui.h:50
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
+"Use fast LZ compression.\n"
+"config: compress"
 msgstr ""
-"Koristi brzu LZO kompresiju.\n"
-"config: comp-lzo"
+"Koristi brzu LZ kompresiju.\n"
+"config: compress"
 
 #: ../properties/nm-openvpn-dialog.ui.h:52
 msgid "Use a _TCP connection"

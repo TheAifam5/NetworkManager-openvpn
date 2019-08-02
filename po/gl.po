@@ -225,8 +225,8 @@ msgstr "opción non válida"
 
 #: ../properties/import-export.c:991
 #, c-format
-msgid "unsupported comp-lzo argument"
-msgstr "argumento comp-lzo non compatíbel"
+msgid "unsupported compress argument"
+msgstr "argumento compress non compatíbel"
 
 #: ../properties/import-export.c:1089
 #, c-format
@@ -893,19 +893,19 @@ msgstr "Usar a compresión de datos L_ZO"
 
 #: ../properties/nm-openvpn-dialog.ui.h:44
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
+"Use fast LZ compression.\n"
+"config: compress"
 msgstr ""
-"Usar compresión LZO rápida \n"
-"config: comp-lzo"
+"Usar compresión LZ rápida \n"
+"config: compress"
 
 #: ../properties/nm-openvpn-dialog.ui.h:46
 msgid ""
-"Select the LZO data compression mode.\n"
-"config: comp-lzo"
+"Select the LZ data compression mode.\n"
+"config: compress"
 msgstr ""
-"Seleccionar o modo de compresión de datos LZO.\n"
-"config: comp-lzo"
+"Seleccionar o modo de compresión de datos LZ.\n"
+"config: compress"
 
 #: ../properties/nm-openvpn-dialog.ui.h:48
 msgid "Use a _TCP connection"

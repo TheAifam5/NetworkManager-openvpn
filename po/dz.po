@@ -415,8 +415,8 @@ msgstr "ཨེལ་ཛེརཌི་ཨེབ་བཙུགས་ལག་ལ
 #: ../properties/nm-openvpn-dialog.ui.h:50
 #, fuzzy
 msgid ""
-"Use fast LZO compression.\n"
-"config: comp-lzo"
+"Use fast LZ compression.\n"
+"config: compress"
 msgstr "ཨེལ་ཛེརཌི་ཨེབ་བཙུགས་ལག་ལེན་འཐབ་"
 
 #: ../properties/nm-openvpn-dialog.ui.h:52
@@ -917,7 +917,7 @@ msgstr ""
 #~ msgid "Routes:  %s"
 #~ msgstr "འགྲུལ་ལམ:  %s"
 
-#~ msgid "Use LZO Compression: %s"
+#~ msgid "Use LZ Compression: %s"
 #~ msgstr "ཨེལ་ཛེརཌི་ཨོ་ཨེབ་བཙུགས་ལག་ལེན་འཐབ: %s"
 
 #~ msgid "Yes"
